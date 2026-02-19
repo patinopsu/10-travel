@@ -1,0 +1,78 @@
+@import url(https://fonts.bunny.net/css?family=kanit:300);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Background */
+.bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-container::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-image: url('res/background.webp');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5) blur(5px);
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+/* Header */
+.container .header {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 50px;
+}
+
+
+/* Content */
+.container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.container .content .article {
+    padding: 10px;
+    margin: 10px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(225, 221, 214);
+    border-radius: 20px;
+}
+
+.container .content .article p {
+    max-width: 600px;
+    text-align: center;
+}
+
+.container .content img{
+    border-radius: 10px;
+    width: 300px;
+}
